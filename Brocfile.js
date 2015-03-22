@@ -2,6 +2,7 @@
 /* global require, module */
 
 var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
+var pickFiles = require('broccoli-static-compiler');
 
 var app = new EmberAddon();
 
@@ -18,4 +19,11 @@ var app = new EmberAddon();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-module.exports = app.toTree();
+app.import(app.bowerDirectory + '/foundation-apps/js/vendor/iconic.min.js');
+
+var iconic = pickFiles( app.bowerDirectory + '/foundation-apps/iconic', {
+    srcDir: '/',
+    destDir: '/assets/img/iconic'
+});
+
+module.exports = app.toTree([iconic]);

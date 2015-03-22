@@ -8,6 +8,7 @@ import ZfAccordion from './components/zf-accordion';
 import ZfAccordionItem from './components/zf-accordion-item';
 import ZfTabs from './components/zf-tabs';
 import ZfTabItem from './components/zf-tab-item';
+import ZfIconic from './components/zf-iconic';
 
 export {
   ZfAnimationMixin,
@@ -19,5 +20,6 @@ export {
   ZfAccordion,
   ZfAccordionItem,
   ZfTabs,
-  ZfTabItem
+  ZfTabItem,
+  ZfIconic
 };
