@@ -6,8 +6,8 @@ var ZfAnimationMixin = Ember.Mixin.create({
 
   animationIn: 'fadeIn',
   animationOut: 'fadeOut',
-  animationEasing: 'easeIn',
-  animationSpeed: 'slow',
+  animationEasing: 'linear',
+  animationSpeed: 'default',
 
   initClasses: ['ng-enter', 'ng-leave'],
   transitionClasses: ['ng-enter-active', 'ng-leave-active'],
