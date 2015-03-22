@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import ZfAnimationMixin from '../mixins/zf-animation';
 
 var ZfAccordionComponent = Ember.Component.extend({
   classNames: ['accordion'],

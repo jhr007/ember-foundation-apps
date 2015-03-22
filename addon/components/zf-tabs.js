@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import ZfAnimationMixin from '../mixins/zf-animation';
 
 var ZfTabsComponent = Ember.Component.extend({
   classNames: ['tabs-container'],
