@@ -9,6 +9,9 @@ var ZfAnimationMixin = Ember.Mixin.create({
   animationEasing: 'easeIn',
   animationSpeed: 'slow',
 
+  initClasses: ['ng-enter', 'ng-leave'],
+  transitionClasses: ['ng-enter-active', 'ng-leave-active'],
+
   transitionSpeed: (function() {
     var speeds = {
       'slow': 750,
@@ -21,32 +24,32 @@ var ZfAnimationMixin = Ember.Mixin.create({
   willTransitionIn: function() {
     this.set('isActive', true);
     console.log(1, this.$().attr('class'));
-    this.$().addClass('ng-enter ' + this.get('animationIn'));
+    this.$().addClass(this.get('initClasses.firstObject') + ' ' + this.get('animationIn'));
     console.log(1, this.$().attr('class'));
   },
 
   transitionIn: function(callback) {
     console.log(2, this.$().attr('class'));
-    this.$().addClass('ng-enter-active');
+    this.$().addClass(this.get('transitionClasses.firstObject'));
     console.log(2, this.$().attr('class'));
     callback();
   },
 
   didTransitionIn: function() {
     console.log(3, this.$().attr('class'));
-    this.$().removeClass('ng-enter ng-enter-active ' + this.get('animationIn'));
+    this.$().removeClass(this.get('initClasses.firstObject') +  ' ' + this.get('transitionClasses.firstObject') + ' ' + this.get('animationIn'));
     console.log(3, this.$().attr('class'));
   },
 
   willTransitionOut: function() {
     console.log(-1, this.$().attr('class'));
-    this.$().addClass('ng-leave ' + this.get('animationOut'));
+    this.$().addClass(this.get('initClasses.lastObject') + ' ' + this.get('animationOut'));
     console.log(-1, this.$().attr('class'));
   },
 
   transitionOut: function(callback) {
     console.log(-2, this.$().attr('class'));
-    this.$().addClass('ng-leave-active');
+    this.$().addClass(this.get('transitionClasses.lastObject'));
     console.log(-2, this.$().attr('class'));
     callback();
   },
@@ -54,7 +57,7 @@ var ZfAnimationMixin = Ember.Mixin.create({
   didTransitionOut: function() {
     this.set('isActive', false);
     console.log(-3, this.$().attr('class'));
-    this.$().removeClass('ng-leave ng-leave-active ' + this.get('animationOut'));
+    this.$().removeClass(this.get('initClasses.lastObject') + ' ' + this.get('transitionClasses.lastObject') + ' ' + this.get('animationOut'));
     console.log(-3, this.$().attr('class'));
   }
 });
