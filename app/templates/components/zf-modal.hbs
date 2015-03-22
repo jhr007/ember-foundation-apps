@@ -1,0 +1,7 @@
+{{#if isOverlay}}
+  {{#zf-modal isOverlay=false}}
+    {{yield}}
+  {{/zf-modal}}
+{{else}}
+  {{yield}}
+{{/if}}
