@@ -1,7 +1,7 @@
 {
   "name": "ember-foundation-apps",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "An application port for Ember from Foundation Apps",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,17 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": {
+    "type:": "git",
+    "url": "https://github.com/tatemz/ember-foundation-apps"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "A. Tate Barber",
+  "bugs": {
+    "url": "https://github.com/tatemz/ember-foundation-apps/issues"
+  },
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.0",
@@ -38,7 +44,12 @@
     "glob": "^4.0.5"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "Foundation",
+    "ZURB",
+    "responsive",
+    "apps",
+    "applications"
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
