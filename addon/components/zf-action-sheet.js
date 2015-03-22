@@ -6,8 +6,8 @@ var ZfActionSheetComponent = Ember.Component.extend( ZfAnimationMixin, {
   classNameBindings: ['position'],
   position: 'bottom',
 
-  initClassses: ['is-active-add', 'is-active-remove'],
-  transitionClassses: ['is-active-add-active', 'is-active-remove-active'],
+  initClasses: ['is-active-add', 'is-active-remove'],
+  transitionClasses: ['is-active-add-active', 'is-active-remove-active'],
 
   animationSpeed: 'slow',
 

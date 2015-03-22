@@ -13,14 +13,14 @@ var ZfButton = Ember.Component.extend({
     var v;
     if ( this.get('targetElement') === null ) {
       var id = this.get('targetId');
-      if ( ! id ) return false;
+      if ( ! id ) { return false; }
 
       if ( Ember.View.views.hasOwnProperty(id) ) {
         v = Ember.View.views[id];
         this.set('targetElement', v);
       }
     } else {
-      v = this.get('targetElement')
+      v = this.get('targetElement');
     }
     switch (this.get('action')) {
       case 'toggle':
