@@ -11,43 +11,47 @@ var ZfPanelComponent = Ember.Component.extend( ZfAnimationMixin, {
   }).property('position'),
 
   animationIn: (function() {
+    var className;
     switch (this.get('position')) {
       case 'top':
-        return 'slideInDown';
+        className = 'slideInDown';
       break;
 
       case 'bottom':
-        return 'slideInUp';
+        className = 'slideInUp';
       break;
 
       case 'left':
-        return 'slideInLeft';
+        className = 'slideInLeft';
       break;
 
       case 'right':
-        return 'slideInRight';
+        className = 'slideInRight';
       break;
     }
+    return className;
   }).property('position'),
 
   animationOut: (function() {
+    var className;
     switch (this.get('position')) {
       case 'top':
-        return 'slideOutUp';
+        className = 'slideOutUp';
       break;
 
       case 'bottom':
-        return 'slideOutDown';
+        className = 'slideOutDown';
       break;
 
       case 'left':
-        return 'slideOutRight';
+        className = 'slideOutRight';
       break;
 
       case 'right':
-        return 'slideOutLeft';
+        className = 'slideOutLeft';
       break;
     }
+    return className;
   }).property('position'),
 });
 
