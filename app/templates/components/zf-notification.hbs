@@ -1,0 +1,22 @@
+
+
+{{#if isDynamic}}
+  {{#each notification in notifications}}
+    {{#zf-notification
+      type="child"
+      title=notification.title
+      image=notification.image
+      id=notification.id
+    }}
+      {{notification.content}}
+    {{/zf-notification}}
+  {{/each}}
+{{else}}
+  {{#if image}}
+    <div class="notification-icon"><img {{bind-attr src="image"}}></div>
+  {{/if}}
+  <div class="notification-content">
+    <h1>{{title}}</h1>
+    {{yield}}
+  </div>
+{{/if}}
