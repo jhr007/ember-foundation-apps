@@ -6,6 +6,8 @@ import ZfModalComponent from './components/zf-modal';
 import ZfNotificationComponent from './components/zf-notification';
 import ZfAccordion from './components/zf-accordion';
 import ZfAccordionItem from './components/zf-accordion-item';
+import ZfTabs from './components/zf-tabs';
+import ZfTabItem from './components/zf-tab-item';
 
 export {
   ZfAnimationMixin,
@@ -15,5 +17,7 @@ export {
   ZfModalComponent,
   ZfNotificationComponent,
   ZfAccordion,
-  ZfAccordionItem
+  ZfAccordionItem,
+  ZfTabs,
+  ZfTabItem
 };
