@@ -1,6 +1,6 @@
 {
   "name": "ember-foundation-apps",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An application port for Ember from Foundation Apps",
   "directories": {
     "doc": "doc",
