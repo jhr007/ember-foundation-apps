@@ -12,7 +12,7 @@
     "test": "ember test"
   },
   "repository": {
-    "type:": "git",
+    "type": "git",
     "url": "https://github.com/tatemz/ember-foundation-apps"
   },
   "engines": {
